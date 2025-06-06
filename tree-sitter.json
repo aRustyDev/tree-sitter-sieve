@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "sieve",
+      "camelcase": "Sieve",
+      "title": "Sieve",
+      "scope": "source.sieve",
+      "file-types": [
+        "sieve"
+      ],
+      "injection-regex": "^sieve$",
+      "class-name": "TreeSitterSieve"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "AGPL-3.0-or-later",
+    "description": "Language support for Sieve email filtering language (RFC 5228) with Proton advanced features",
+    "authors": [
+      {
+        "name": "aRustyDev",
+        "email": "36318507+aRustyDev@users.noreply.github.com",
+        "url": "https://github.com/aRustyDev"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/aRustyDev/tree-sitter-sieve"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "sieve-language-server",
+  "version": "0.1.0",
+  "description": "Language Server for Sieve email filtering language",
+  "main": "./out/server.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "clean": "rimraf out",
+    "prepack": "npm run clean && npm run build"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0",
+    "rimraf": "^5.0.0"
+  },
+  "keywords": [
+    "language-server",
+    "sieve",
+    "email",
+    "filtering",
+    "proton"
+  ]
+}

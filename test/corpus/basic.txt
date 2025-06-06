@@ -1,0 +1,11 @@
+=================================
+Simple require statement
+=================================
+
+require "fileinto";
+
+---
+
+(source_file
+  (require_statement
+    (string)))
