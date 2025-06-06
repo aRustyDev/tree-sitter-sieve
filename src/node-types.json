@@ -1,0 +1,669 @@
+[
+  {
+    "type": "action_command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "action_name",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_list",
+          "named": true
+        },
+        {
+          "type": "tagged_argument_no_value",
+          "named": true
+        },
+        {
+          "type": "tagged_argument_with_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "action_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "action_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "action_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "action_statement",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "boolean_test",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "test",
+          "named": true
+        },
+        {
+          "type": "test_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "else_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "elsif_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "test",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "else_clause",
+          "named": true
+        },
+        {
+          "type": "elsif_clause",
+          "named": true
+        },
+        {
+          "type": "test",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiline_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "require_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "action_statement",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "require_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "multiline_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tagged_argument_no_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tagged_argument_with_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "test",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean_test",
+          "named": true
+        },
+        {
+          "type": "test_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "test_command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_list",
+          "named": true
+        },
+        {
+          "type": "tagged_argument_no_value",
+          "named": true
+        },
+        {
+          "type": "tagged_argument_with_value",
+          "named": true
+        },
+        {
+          "type": "test_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "test_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "test",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "test_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "/*",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "\\",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "addflag",
+    "named": false
+  },
+  {
+    "type": "address",
+    "named": false
+  },
+  {
+    "type": "all",
+    "named": false
+  },
+  {
+    "type": "allof",
+    "named": false
+  },
+  {
+    "type": "anychild",
+    "named": false
+  },
+  {
+    "type": "anyof",
+    "named": false
+  },
+  {
+    "type": "body",
+    "named": false
+  },
+  {
+    "type": "comparator",
+    "named": false
+  },
+  {
+    "type": "contains",
+    "named": false
+  },
+  {
+    "type": "contenttype",
+    "named": false
+  },
+  {
+    "type": "copy",
+    "named": false
+  },
+  {
+    "type": "count",
+    "named": false
+  },
+  {
+    "type": "create",
+    "named": false
+  },
+  {
+    "type": "currentdate",
+    "named": false
+  },
+  {
+    "type": "date",
+    "named": false
+  },
+  {
+    "type": "denotify",
+    "named": false
+  },
+  {
+    "type": "discard",
+    "named": false
+  },
+  {
+    "type": "domain",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "elsif",
+    "named": false
+  },
+  {
+    "type": "envelope",
+    "named": false
+  },
+  {
+    "type": "environment",
+    "named": false
+  },
+  {
+    "type": "exists",
+    "named": false
+  },
+  {
+    "type": "expire",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "fileinto",
+    "named": false
+  },
+  {
+    "type": "flags",
+    "named": false
+  },
+  {
+    "type": "header",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "importance",
+    "named": false
+  },
+  {
+    "type": "is",
+    "named": false
+  },
+  {
+    "type": "keep",
+    "named": false
+  },
+  {
+    "type": "localpart",
+    "named": false
+  },
+  {
+    "type": "mailbox",
+    "named": false
+  },
+  {
+    "type": "mailboxexists",
+    "named": false
+  },
+  {
+    "type": "matches",
+    "named": false
+  },
+  {
+    "type": "mime",
+    "named": false
+  },
+  {
+    "type": "not",
+    "named": false
+  },
+  {
+    "type": "notify",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "originalzone",
+    "named": false
+  },
+  {
+    "type": "over",
+    "named": false
+  },
+  {
+    "type": "param",
+    "named": false
+  },
+  {
+    "type": "redirect",
+    "named": false
+  },
+  {
+    "type": "regex",
+    "named": false
+  },
+  {
+    "type": "reject",
+    "named": false
+  },
+  {
+    "type": "removeflag",
+    "named": false
+  },
+  {
+    "type": "require",
+    "named": false
+  },
+  {
+    "type": "setflag",
+    "named": false
+  },
+  {
+    "type": "size",
+    "named": false
+  },
+  {
+    "type": "spamtest",
+    "named": false
+  },
+  {
+    "type": "stop",
+    "named": false
+  },
+  {
+    "type": "subtype",
+    "named": false
+  },
+  {
+    "type": "text:",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "under",
+    "named": false
+  },
+  {
+    "type": "vacation",
+    "named": false
+  },
+  {
+    "type": "value",
+    "named": false
+  },
+  {
+    "type": "virustest",
+    "named": false
+  },
+  {
+    "type": "zone",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

@@ -382,10 +382,6 @@
         },
         {
           "type": "STRING",
-          "value": "relational"
-        },
-        {
-          "type": "STRING",
           "value": "spamtest"
         },
         {
@@ -399,7 +395,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "tagged_argument"
+          "name": "tagged_argument_with_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tagged_argument_no_value"
         },
         {
           "type": "SYMBOL",
@@ -506,7 +506,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "tagged_argument"
+          "name": "tagged_argument_with_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tagged_argument_no_value"
         },
         {
           "type": "SYMBOL",
@@ -522,7 +526,7 @@
         }
       ]
     },
-    "tagged_argument": {
+    "tagged_argument_with_value": {
       "type": "SEQ",
       "members": [
         {
@@ -530,125 +534,127 @@
           "value": ":"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "comparator"
+            },
+            {
+              "type": "STRING",
+              "value": "zone"
+            },
+            {
+              "type": "STRING",
+              "value": "originalzone"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
-          "name": "tag_name"
+          "name": "string"
+        }
+      ]
+    },
+    "tagged_argument_no_value": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ":"
         },
         {
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "string"
+              "type": "STRING",
+              "value": "is"
             },
             {
-              "type": "BLANK"
+              "type": "STRING",
+              "value": "contains"
+            },
+            {
+              "type": "STRING",
+              "value": "matches"
+            },
+            {
+              "type": "STRING",
+              "value": "regex"
+            },
+            {
+              "type": "STRING",
+              "value": "localpart"
+            },
+            {
+              "type": "STRING",
+              "value": "domain"
+            },
+            {
+              "type": "STRING",
+              "value": "all"
+            },
+            {
+              "type": "STRING",
+              "value": "over"
+            },
+            {
+              "type": "STRING",
+              "value": "under"
+            },
+            {
+              "type": "STRING",
+              "value": "copy"
+            },
+            {
+              "type": "STRING",
+              "value": "create"
+            },
+            {
+              "type": "STRING",
+              "value": "flags"
+            },
+            {
+              "type": "STRING",
+              "value": "importance"
+            },
+            {
+              "type": "STRING",
+              "value": "mime"
+            },
+            {
+              "type": "STRING",
+              "value": "anychild"
+            },
+            {
+              "type": "STRING",
+              "value": "type"
+            },
+            {
+              "type": "STRING",
+              "value": "subtype"
+            },
+            {
+              "type": "STRING",
+              "value": "contenttype"
+            },
+            {
+              "type": "STRING",
+              "value": "param"
+            },
+            {
+              "type": "STRING",
+              "value": "count"
+            },
+            {
+              "type": "STRING",
+              "value": "value"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
             }
           ]
-        }
-      ]
-    },
-    "tag_name": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "is"
-        },
-        {
-          "type": "STRING",
-          "value": "contains"
-        },
-        {
-          "type": "STRING",
-          "value": "matches"
-        },
-        {
-          "type": "STRING",
-          "value": "regex"
-        },
-        {
-          "type": "STRING",
-          "value": "count"
-        },
-        {
-          "type": "STRING",
-          "value": "value"
-        },
-        {
-          "type": "STRING",
-          "value": "comparator"
-        },
-        {
-          "type": "STRING",
-          "value": "localpart"
-        },
-        {
-          "type": "STRING",
-          "value": "domain"
-        },
-        {
-          "type": "STRING",
-          "value": "all"
-        },
-        {
-          "type": "STRING",
-          "value": "over"
-        },
-        {
-          "type": "STRING",
-          "value": "under"
-        },
-        {
-          "type": "STRING",
-          "value": "copy"
-        },
-        {
-          "type": "STRING",
-          "value": "zone"
-        },
-        {
-          "type": "STRING",
-          "value": "originalzone"
-        },
-        {
-          "type": "STRING",
-          "value": "create"
-        },
-        {
-          "type": "STRING",
-          "value": "flags"
-        },
-        {
-          "type": "STRING",
-          "value": "importance"
-        },
-        {
-          "type": "STRING",
-          "value": "mime"
-        },
-        {
-          "type": "STRING",
-          "value": "anychild"
-        },
-        {
-          "type": "STRING",
-          "value": "type"
-        },
-        {
-          "type": "STRING",
-          "value": "subtype"
-        },
-        {
-          "type": "STRING",
-          "value": "contenttype"
-        },
-        {
-          "type": "STRING",
-          "value": "param"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "identifier"
         }
       ]
     },
